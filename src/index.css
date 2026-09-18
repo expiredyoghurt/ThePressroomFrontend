@@ -1,0 +1,196 @@
+:root {
+  --paper: #f7f5f0;
+  --paper-alt: #efece4;
+  --ink: #2b2b2b;
+  --ink-light: #6b6560;
+  --rule: #d8d2c6;
+  --accent: #c0392b;
+  --accent-dark: #96271c;
+  --success: #2f7a4f;
+  --warn: #b8790a;
+  --font-headline: Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--paper-alt);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-headline);
+  margin: 0 0 8px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+.btn {
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn--accent {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--sm {
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-light);
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 9px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: inherit;
+  background: white;
+}
+
+.error-banner {
+  background: #fdecea;
+  border: 1px solid var(--accent);
+  color: var(--accent-dark);
+  padding: 10px 14px;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  white-space: pre-wrap;
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: var(--ink);
+  color: var(--paper);
+  height: 64px;
+}
+.masthead__title {
+  font-family: var(--font-headline);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.masthead__meta {
+  font-size: 13px;
+  opacity: 0.85;
+}
+.masthead nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.masthead a,
+.masthead button {
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 14px;
+  background: none;
+  border: none;
+}
+.masthead a:hover,
+.masthead button:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 18px 20px;
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+}
+
+.login-card {
+  background: var(--paper);
+  padding: 32px 30px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h1 {
+  font-size: 24px;
+  text-align: center;
+}
+.login-card__sub {
+  text-align: center;
+  color: var(--ink-light);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.login-card__switch {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+}
