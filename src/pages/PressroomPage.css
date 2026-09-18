@@ -1,0 +1,68 @@
+.pressroom-scene {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 24px auto 0;
+}
+
+.pressroom-scene__img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hotspot {
+  position: absolute;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.hotspot:hover,
+.hotspot:focus-visible {
+  background: rgba(192, 57, 43, 0.1);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.hotspot__label {
+  display: none;
+}
+
+.hotspot:hover .hotspot__label {
+  display: block;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: clamp(12px, 2vw, 16px);
+  color: var(--accent-dark);
+  background: rgba(247, 245, 240, 0.92);
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.hotspot__badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .hotspot__label {
+    display: none !important; /* no hover state on touch; badge alone is enough */
+  }
+}

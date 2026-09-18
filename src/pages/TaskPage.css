@@ -1,0 +1,152 @@
+.article-meta {
+  color: var(--ink-light);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.article-title {
+  font-size: 26px;
+  margin-bottom: 16px;
+  color: var(--accent-dark);
+}
+.article-body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.article-body p {
+  margin: 0 0 14px;
+}
+
+.chunk {
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.1s;
+}
+.chunk:hover {
+  background: #f0e4c8;
+}
+.chunk--selected {
+  background: #ffe08a;
+  box-shadow: 0 0 0 2px #ffe08a;
+}
+
+.task-progress {
+  font-size: 13px;
+  color: var(--ink-light);
+  margin-bottom: 6px;
+}
+.task-progress-bar {
+  height: 6px;
+  background: var(--rule);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.task-progress-bar__fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s;
+}
+
+.task-question {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.vocab-context {
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+}
+.vocab-context mark {
+  background: #ffe08a;
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.option-btn {
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  border-radius: 4px;
+  font-size: 15px;
+}
+.option-btn:hover {
+  border-color: var(--accent);
+}
+.option-btn--selected {
+  border-color: var(--accent);
+  background: #fdecea;
+  font-weight: 600;
+}
+
+.task-hint {
+  font-size: 13px;
+  color: var(--ink-light);
+  margin-bottom: 16px;
+}
+
+.task-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.result-card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.result-note {
+  font-size: 14px;
+  color: var(--ink-light);
+  margin: 4px 0;
+}
+.result-note--good {
+  color: var(--success);
+  font-weight: 600;
+}
+.result-note--warn {
+  color: var(--warn);
+  font-weight: 600;
+}
+.result-breakdown {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.result-row {
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+.result-row--correct {
+  background: #eaf6ee;
+}
+.result-row--wrong {
+  background: #fdecea;
+}
+
+.model-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+.model-answer {
+  font-size: 14px;
+  line-height: 1.5;
+}
